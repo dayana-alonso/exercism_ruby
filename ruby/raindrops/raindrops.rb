@@ -7,8 +7,13 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 class Raindrops
+	def self.convert(factor)
+    word = ""
 
-	def self.convert(num)
+    word << 'Pling' if factor % 3 == 0
+    word << 'Plang' if factor % 5 == 0
+    word << 'Plong' if factor % 7 == 0
 
-	end
-end
+    return word.empty?  ? factor.to_s : word
+  end
+ end
